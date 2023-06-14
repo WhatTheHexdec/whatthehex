@@ -21,9 +21,9 @@ jobs:
       # android apps can only be built on linux
       matrix:
         include:
-          - platform: "ios"
-            # At the moment we need to use macos-12 instead of macos-11 (macos-latest)
-            os: "macos-12"
+          # - platform: "ios"
+            # # At the moment we need to use macos-12 instead of macos-11 (macos-latest)
+            # os: "macos-12"
           - platform: "android"
             os: "ubuntu-latest"
 
