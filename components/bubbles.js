@@ -43,6 +43,7 @@ const stylesheet = StyleSheet.create({
   blobs: {
     flexDirection: "row",
     flexWrap: "wrap",
+    justifyContent: "space-evenly"
   },
 });
 
