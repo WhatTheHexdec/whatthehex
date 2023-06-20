@@ -5,30 +5,10 @@ import GuessTheCode from "./components/guessTheCode";
 
 export default function App() {
   const [which, setWhich] = useState("bubbles");
-  const [y, setY] = useState(Infinity);
-
-  const handleTouchStart = (e) => {
-    setY(e.nativeEvent.pageY);
-  };
-
-  const handleTouchEnd = (e) => {
-    const delta = y - e.nativeEvent.pageY;
-    if (Math.abs(delta) < 2) return;
-    if (delta > 0) {
-      setWhich("");
-    } else if (delta < 0) {
-      setWhich("bubbles");
-    }
-  };
-
   return (
-    <View
-      style={{ flex: 1 }}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
+    <View style={{ flex: 1 }}>
       {which === "bubbles" ? <Bubbles /> : <GuessTheCode />}
-      {/*<Pressable
+      <Pressable
         style={{
           position: "absolute",
           bottom: 32,
@@ -58,7 +38,7 @@ export default function App() {
         >
           😊
         </Text>
-        </Pressable>*/}
+      </Pressable>
     </View>
   );
 }

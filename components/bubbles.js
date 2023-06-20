@@ -44,7 +44,7 @@ const stylesheet = StyleSheet.create({
   blobs: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-evenly",
+    justifyContent: "space-evenly"
   },
 });
 
@@ -54,7 +54,6 @@ export default function () {
   const [blobs, generateBlobs] = useGenerateBlobs(color);
   const [colorsGiven, setColorsGiven] = useState(1);
   const [colorsGuessed, setColorsGuessed] = useState(1);
-  // const [y, setY] = useState(Infinity);
 
   const handlePress = (blob) => {
     setColorsGuessed((previous) => previous + 1);
