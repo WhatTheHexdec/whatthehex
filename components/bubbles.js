@@ -1,4 +1,5 @@
 import { Pressable, View, Text, StyleSheet } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import useGenerateBlobs from "../hooks/useGenerateBlobs";
 import useGenerateColor from "../hooks/useGenerateColor";
 import createHex from "../createHex";
@@ -110,6 +111,7 @@ export default function () {
           <Text>15</Text>
         </Pressable>
       </View>
+      <StatusBar />
     </View>
   );
 }

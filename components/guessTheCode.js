@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { View, StyleSheet, TextInput } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import createHex from "../createHex";
 
 const stylesheet = StyleSheet.create({
@@ -76,6 +77,7 @@ export default function () {
         onChangeText={(text) => handleInput(text)}
         style={stylesheet.input}
       />
+      <StatusBar />
     </View>
   );
 }
